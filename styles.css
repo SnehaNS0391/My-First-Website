@@ -1,0 +1,124 @@
+/* CSS Variables */
+:root {
+  --main-color: #4CAF50;
+  --secondary-color: #f4f4f4;
+  --font-main: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Colors */
+.hex { color: #3498db; }
+.rgb { color: rgb(255, 99, 71); }
+.hsl { color: hsl(120, 100%, 25%); }
+.gradient {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 10px;
+  color: white;
+}
+
+/* Fonts & Text Styling */
+.websafe { font-family: Arial, sans-serif; }
+.google-font { font-family: 'Roboto', sans-serif; }
+.styled-text {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Backgrounds */
+.bg-color { background: lightblue; padding: 20px; }
+.bg-image {
+  background: url('https://via.placeholder.com/150') no-repeat center/cover;
+  height: 150px;
+}
+
+/* Box Model */
+.box {
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid black;
+  background: lightgray;
+}
+
+/* Units */
+.px { font-size: 16px; }
+.percent { font-size: 120%; }
+.em { font-size: 1.5em; }
+.rem { font-size: 2rem; }
+.vhvw { font-size: 5vh; }
+
+/* Display */
+.block { display: block; background: pink; }
+.inline { display: inline; background: yellow; }
+.inline-block { display: inline-block; background: lightgreen; padding: 10px; }
+.none { display: none; }
+
+/* Positioning */
+.static { position: static; background: #ddd; }
+.relative { position: relative; top: 10px; background: #bbb; }
+.absolute { position: absolute; top: 0; right: 0; background: orange; }
+.fixed { position: fixed; bottom: 0; right: 0; background: red; color: white; }
+.sticky { position: sticky; top: 0; background: green; color: white; }
+
+/* Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #eee;
+  padding: 20px;
+}
+
+/* Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.grid-item {
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body { background: #fafafa; }
+  h1 { font-size: 18px; }
+}
+
+/* Transitions & Animations */
+.btn {
+  background: var(--main-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn:hover { background: darkgreen; }
+
+.animated-box {
+  width: 50px;
+  height: 50px;
+  background: blue;
+  margin-top: 20px;
+  animation: move 3s infinite alternate;
+}
+@keyframes move {
+  from { transform: translateX(0); }
+  to { transform: translateX(100px); }
+}
+
+/* CSS Variables Example */
+:root {
+  --text-color: purple;
+}
+#variables p { color: var(--text-color); }
